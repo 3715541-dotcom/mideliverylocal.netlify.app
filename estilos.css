@@ -1,0 +1,135 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7f5;
+    color: #333;
+}
+
+header {
+    background: #176b4d;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+button, .boton {
+    background: #f28c28;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hero {
+    background: #e5f2e9;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    color: #176b4d;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #176b4d;
+    margin-bottom: 25px;
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 450px;
+    padding: 13px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+.producto {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px #0002;
+}
+
+.producto-imagen {
+    font-size: 60px;
+}
+
+.producto h3, .producto p {
+    margin: 12px;
+}
+
+.precio {
+    color: #176b4d;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+#carrito {
+    background: #e5f2e9;
+}
+
+#lista-carrito p {
+    margin: 12px;
+}
+
+#formulario {
+    max-width: 450px;
+    margin: auto;
+}
+
+footer {
+    background: #176b4d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}

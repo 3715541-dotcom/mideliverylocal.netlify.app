@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Delivery Local</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+    <h2>🇸🇻 Mi Delivery Local</h2>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <button onclick="verCarrito()">🛒 Carrito (<span id="contador">0</span>)</button>
+</header>
+
+<section class="inicio" id="inicio">
+    <h1>¡El sabor de tu municipio!</h1>
+    <p>Compra productos locales desde la comodidad de tu hogar.</p>
+    <a href="#productos" class="boton">Ver productos</a>
+</section>
+
+<section id="productos">
+    <h2>Nuestros productos</h2>
+
+    <div class="productos">
+
+        <div class="producto">
+            <div class="imagen">🫓</div>
+            <h3>Pupusas revueltas</h3>
+            <p>Deliciosas pupusas con curtido.</p>
+            <h3>$3.00</h3>
+            <button onclick="agregar('Pupusas revueltas',3)">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <div class="imagen">🍤</div>
+            <h3>Cóctel de camarón</h3>
+            <p>Fresco y preparado al momento.</p>
+            <h3>$5.50</h3>
+            <button onclick="agregar('Cóctel de camarón',5.50)">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <div class="imagen">🥤</div>
+            <h3>Fresco natural</h3>
+            <p>Bebida tradicional salvadoreña.</p>
+            <h3>$1.25</h3>
+            <button onclick="agregar('Fresco natural',1.25)">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="producto">
+            <div class="imagen">🧺</div>
+            <h3>Artesanías</h3>
+            <p>Productos elaborados localmente.</p>
+            <h3>$4.00</h3>
+            <button onclick="agregar('Artesanías',4)">
+                Agregar al carrito
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<section id="carrito">
+    <h2>🛒 Tu carrito</h2>
+    <div id="lista-carrito"></div>
+    <h3>Total: $<span id="total">0.00</span></h3>
+    <button onclick="hacerPedido()">Realizar pedido</button>
+</section>
+
+<section id="contacto">
+    <h2>Contáctanos</h2>
+    <p>Apoyemos juntos a los negocios de nuestra comunidad.</p>
+    <p>Mi Delivery Local - El Salvador 🇸🇻</p>
+</section>
+
+<footer>
+    <p>© 2026 Mi Delivery Local. Todos los derechos reservados.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Delivery Local</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+    <h2>🇸🇻 Mi Delivery Local</h2>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#pedido">Pedidos</a>
+    </nav>
+    <button onclick="verCarrito()">🛒 <span id="contador">0</span></button>
+</header>
+
+<section class="hero" id="inicio">
+    <h1>¡Lo mejor de tu municipio hasta tu hogar!</h1>
+    <p>Compra productos locales desde tu casa.</p>
+    <a href="#productos" class="boton">Ver productos</a>
+</section>
+
+<section id="productos">
+    <h2>Nuestros productos</h2>
+    <input id="buscar" placeholder="Buscar productos...">
+    <div id="categorias">
+        <button onclick="filtrar('Todos')">Todos</button>
+        <button onclick="filtrar('Comida')">Comida</button>
+        <button onclick="filtrar('Bebidas')">Bebidas</button>
+        <button onclick="filtrar('Artesanías')">Artesanías</button>
+    </div>
+    <div id="productos-lista" class="productos"></div>
+</section>
+
+<section id="carrito">
+    <h2>🛒 Mi carrito</h2>
+    <div id="lista-carrito"></div>
+    <h3>Total: $<span id="total">0.00</span></h3>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+</section>
+
+<section id="pedido">
+    <h2>Datos del pedido</h2>
+    <form id="formulario">
+        <input id="nombre" placeholder="Nombre completo" required>
+        <input id="telefono" type="tel" placeholder="Teléfono" required>
+        <textarea id="direccion" placeholder="Dirección de entrega" required></textarea>
+        <button type="submit" class="boton">Enviar pedido por WhatsApp</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Mi Delivery Local - El Salvador 🇸🇻</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
